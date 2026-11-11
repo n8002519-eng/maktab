@@ -74,3 +74,4 @@ Birozdan so'ng sizga `https://[foydalanuvchi_nomi].github.io/[repo_nomi]/` ko'ri
 ## 📄 Litsenziya
 
 Ushbu loyiha [MIT](LICENSE) litsenziyasi asosida yaratilgan.
+

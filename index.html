@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="O'zbekistonning boy madaniy merosi, Samarqand, Buxoro, Xiva va Toshkentning tarixiy obidalari haqida maktab ta'limiy veb-sayti.">
+  <title>O'zbekiston Tarixiy Joylari | Maktab Loyihasi</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =====================================================================
+       1. SAYT BOSHI VA NAVIGATSIYA (HEADER & NAVBAR)
+       ===================================================================== -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="#hero" class="brand-logo" aria-label="Bosh sahifaga qaytish">
+        <span class="brand-icon" aria-hidden="true">🏛️</span>
+        <div class="brand-title">
+          <span>O'zbekiston Merosi</span>
+          <span>Maktab loyihasi</span>
+        </div>
+      </a>
+
+      <!-- Asosiy menyu havolalari -->
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero">Bosh sahifa</a></li>
+          <li><a href="#gallery">Tarixiy joylar</a></li>
+          <li><a href="#quiz">Mini viktorina</a></li>
+          <li><a href="#about">Loyiha haqida</a></li>
+          <li><a href="#author">Muallif</a></li>
+        </ul>
+      </nav>
+
+      <!-- Harakatlar: Tungi rejim va mobil menyu -->
+      <div class="header-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Tungi rejimni yoqish" title="Mavzuni almashtirish">
+          <span id="themeIcon">🌙</span>
+        </button>
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Menyuni ochish" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =====================================================================
+         2. HERO BO'LIMI (BOSH SAHIFA)
+         ===================================================================== -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span>✨</span> Buyuk Ipak Yo'li Javohirlari
+          </div>
+          <h1 class="hero-title">
+            O'zbekistonning <span class="gradient-text">Buyuk Tarixiy Joylari</span>
+          </h1>
+          <p class="hero-description">
+            Sharqona me'morchilik mo'jizalari, asrlarga teng sirlar va ajdodlarimiz yaratgan betakror madaniy meros bilan birgalikda tanishing. Samarqand, Buxoro, Xiva va Toshkent obidalari sizni kutmoqda!
+          </p>
+          <div class="hero-actions">
+            <a href="#gallery" class="btn btn-primary">
+              <span>Joylar bilan tanishish</span>
+              <span>➔</span>
+            </a>
+            <a href="#quiz" class="btn btn-secondary">
+              <span>Viktorinada sinash 🎯</span>
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Tarixiy obida</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">4</span>
+              <span class="stat-label">Qadimiy shahar</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Ta'limiy va bepul</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vizual Sharqona Karta (CSS gradient va naqshlar) -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-visual-card">
+            <div class="visual-pattern">
+              <div class="visual-emojis">
+                <span>🕌</span>
+                <span>🏛️</span>
+                <span>🗼</span>
+              </div>
+              <h2 class="visual-title">Oltin Meros</h2>
+              <p class="visual-subtitle">XV–XVII asrlarning mahobatli koshinlari va gumbazlari</p>
+              <div class="visual-pills">
+                <span class="visual-pill">Registon</span>
+                <span class="visual-pill">Ichan Qal'a</span>
+                <span class="visual-pill">Poyi Kalon</span>
+                <span class="visual-pill">Shohi Zinda</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         3. TARIXIY JOYLAR GALEREYASI (QIDIRUV VA FILTR BILAN)
+         ===================================================================== -->
+    <section id="gallery" class="gallery-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Madaniy Meros</span>
+          <h2 class="section-title">O'zbekiston Obidalari Galereyasi</h2>
+          <p class="section-subtitle">
+            Har bir obidaning tarixi, me'moriy tuzilishi va qiziqarli faktlarini bilish uchun kartochkani bosing.
+          </p>
+        </div>
+
+        <!-- Filtr va Qidiruv boshqaruv paneli -->
+        <div class="controls-card">
+          <div class="search-wrapper">
+            <span class="search-icon" aria-hidden="true">🔍</span>
+            <input 
+              type="text" 
+              id="searchInput" 
+              class="search-input" 
+              placeholder="Obida nomi, shahar yoki asr bo'yicha qidiring (masalan: Registon, Xiva, Amir Temur)..." 
+              aria-label="Tarixiy joylarni qidirish"
+            >
+            <button id="clearSearchBtn" class="clear-search-btn hidden" aria-label="Qidiruvni tozalash" title="Tozalash">✕</button>
+          </div>
+
+          <div class="filter-row">
+            <div class="filter-tabs" role="tablist" aria-label="Shaharlar bo'yicha saralash">
+              <button class="filter-btn active" data-city="all">Barchasi</button>
+              <button class="filter-btn" data-city="Samarqand">Samarqand</button>
+              <button class="filter-btn" data-city="Buxoro">Buxoro</button>
+              <button class="filter-btn" data-city="Xiva">Xiva</button>
+              <button class="filter-btn" data-city="Toshkent">Toshkent</button>
+            </div>
+            <div id="cardsCount" class="cards-count">Yuklanmoqda...</div>
+          </div>
+        </div>
+
+        <!-- Kartochkalar ro'yxati (Grid) -->
+        <div id="galleryGrid" class="gallery-grid" aria-live="polite">
+          <!-- JavaScript orqali joylashtiriladi -->
+        </div>
+
+        <!-- Qidiruv bo'yicha hech narsa topilmaganda -->
+        <div id="noResults" class="no-results hidden">
+          <div class="no-results-icon">🔎</div>
+          <h3>Hech qanday obida topilmadi</h3>
+          <p>Iltimos, boshqa qidiruv so'zini kiriting yoki filtrni "Barchasi"ga o'zgartiring.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         4. MINI VIKTORINA BO'LIMI (QUIZ)
+         ===================================================================== -->
+    <section id="quiz" class="quiz-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Bilimingizni Sinang</span>
+          <h2 class="section-title">O'zbekiston Tarixi Viktorinasi</h2>
+          <p class="section-subtitle">
+            5 ta qiziqarli savolga javob bering va o'z tarixingiz bo'yicha bilimlaringiz darajasini tekshiring!
+          </p>
+        </div>
+
+        <div class="quiz-wrapper">
+          <!-- Viktorina kartochkasi -->
+          <div id="quizCard" class="quiz-card">
+            <div class="quiz-header">
+              <div class="quiz-progress-info">
+                <span>Savol: <strong id="quizCurrentNum">1</strong> / <span id="quizTotalNum">5</span></span>
+                <span>Tarixiy bilimdon</span>
+              </div>
+              <div class="quiz-progress-track">
+                <div id="quizProgressBar" class="quiz-progress-bar"></div>
+              </div>
+            </div>
+
+            <h3 id="quizQuestionText" class="quiz-question-text">Savol matni yuklanmoqda...</h3>
+
+            <!-- Variantlar ro'yxati -->
+            <div id="quizOptionsContainer" class="quiz-options-container">
+              <!-- JavaScript orqali to'ldiriladi -->
+            </div>
+
+            <!-- Javob sharhi / Feedback -->
+            <div id="quizFeedback" class="quiz-feedback hidden"></div>
+
+            <div class="quiz-actions">
+              <button id="quizNextBtn" class="btn btn-primary hidden">Keyingi savol ➔</button>
+            </div>
+          </div>
+
+          <!-- Viktorina yakuniy natijasi -->
+          <div id="quizResultBox" class="quiz-result-box hidden">
+            <div class="result-icon">🏆</div>
+            <h3 class="result-title">Viktorina yakunlandi!</h3>
+            <p id="quizScoreText" class="quiz-score-text">5 ta savoldan 0 tasiga to'g'ri javob berdingiz.</p>
+            <div id="quizResultBadge" class="quiz-result-badge">Natija hisoblanmoqda...</div>
+            <div>
+              <button id="quizRestartBtn" class="btn btn-primary">Qayta topshirish 🔄</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         5. LOYIHA HAQIDA VA MUALLIF BO'LIMI
+         ===================================================================== -->
+    <section id="about" class="info-section">
+      <div class="container">
+        <div class="info-grid">
+          <!-- Loyiha haqida karta -->
+          <div class="info-card">
+            <div class="info-card-header">
+              <div class="info-icon">📖</div>
+              <h3 class="info-title">Loyiha haqida</h3>
+            </div>
+            <p class="info-text">
+              Ushbu veb-sayt maktab o'quvchilari, tarix ixlosmandlari va yurtimiz yoshlarining Vatanimiz madaniy merosiga bo'lgan qiziqishini oshirish, boy tariximizni zamonaviy raqamli ko'rinishda targ'ib qilish maqsadida yaratilgan ta'limiy loyihadir.
+            </p>
+            <ul class="feature-list">
+              <li><span>✔</span> 100% toza HTML, CSS va JavaScript (hech qanday og'ir kutubxonasiz)</li>
+              <li><span>✔</span> Mobil, planshet va kompyuterlarga to'liq moslashgan zamonaviy dizayn</li>
+              <li><span>✔</span> Qidiruv, shaharlar bo'yicha filtr va interaktiv viktorina</li>
+              <li><span>✔</span> Qulay tungi va kunduzgi rejim (Dark / Light mode)</li>
+            </ul>
+          </div>
+
+          <!-- Muallif karta -->
+          <div id="author" class="info-card">
+            <div class="info-card-header">
+              <div class="info-icon">👨‍💻</div>
+              <h3 class="info-title">Loyiha Muallifi</h3>
+            </div>
+            <p class="info-text">
+              Loyiha maktabning axborot texnologiyalari va tarix fanlari integratsiyasi doirasida mustaqil ravishda ishlab chiqildi.
+            </p>
+            <div class="author-profile">
+              <div class="author-avatar" aria-hidden="true">👤</div>
+              <div class="author-meta">
+                <h4>[ISMINGIZ]</h4>
+                <div class="author-role">Maktab o'quvchisi / Yosh dasturchi</div>
+                <div class="author-school">O'zbekiston Respublikasi umumta'lim maktabi</div>
+              </div>
+            </div>
+            <p class="info-text" style="margin-top: 1rem; font-size: 0.9rem;">
+              "O'z tarixini bilmagan xalqning kelajagi ham bo'lmaydi. Zamonaviy texnologiyalar orqali tariximizni o'rganish yana-da oson va qiziqarli!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       6. MODAL OYNA (BATAFSIL MA'LUMOT UCHUN)
+       ===================================================================== -->
+  <div id="landmarkModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-container">
+      <div class="modal-header-bg" id="modalHeaderBg">
+        <button id="closeModalBtn" class="close-modal-btn" aria-label="Yopish">✕</button>
+        <div class="modal-icon" id="modalIcon">🏛️</div>
+        <h3 class="modal-title" id="modalTitle">Obida nomi</h3>
+        <div class="modal-badges">
+          <span class="modal-badge-pill" id="modalCity">📍 Shahar</span>
+          <span class="modal-badge-pill" id="modalPeriod">⏳ Davr</span>
+          <span class="modal-badge-pill" id="modalBadge">Ansambl</span>
+        </div>
+      </div>
+      <div class="modal-content">
+        <div class="modal-section">
+          <h4>📜 Tarixiy tavsif</h4>
+          <p id="modalDesc">Batafsil ma'lumot...</p>
+        </div>
+        <div class="modal-section">
+          <h4>📐 Me'moriy tuzilishi</h4>
+          <p id="modalArch">Me'morchilik ma'lumoti...</p>
+        </div>
+        <div class="modal-section modal-fact-box">
+          <h4>💡 Qiziqarli fakt</h4>
+          <p id="modalFact">Qiziqarli fakt ma'lumoti...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       7. SAYT PODVALI (FOOTER)
+       ===================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <span class="brand-icon">🏛️</span>
+            <span>O'zbekiston Tarixiy Joylari</span>
+          </div>
+          <p>Maktab o'quvchilari uchun yaratilgan ta'limiy, interaktiv veb-sayt.</p>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="#hero">Bosh sahifa</a></li>
+          <li><a href="#gallery">Galereya</a></li>
+          <li><a href="#quiz">Viktorina</a></li>
+          <li><a href="#about">Loyiha haqida</a></li>
+          <li><a href="#author">Muallif</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 O'zbekiston Tarixiy Joylari. Barcha huquqlar himoyalangan.</div>
+        <div>MIT litsenziyasi asosida tarqatiladi.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Asosiy skript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
+
